@@ -1,6 +1,4 @@
 -- 狗庄数据分析表结构
-CREATE DATABASE dev_data;
-
 CREATE TABLE public.token_states
 (
     token_creator          text,
