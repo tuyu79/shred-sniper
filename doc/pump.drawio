@@ -1,0 +1,473 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9" pages="2">
+  <diagram name="狗庄数据采集" id="LTuNzPg7tZQp5kiITUL2">
+    <mxGraphModel dx="1426" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-1" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="575" y="80" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-3" value="通过 grpc 监听 transaction" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="530" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-3" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-5" value="处理收到的每个 transaction" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="530" y="270" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-6" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-7" target="l86Yfs9dcGPEZyCX4KLZ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-7" target="l86Yfs9dcGPEZyCX4KLZ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-7" value="转换收到的 grpc transaction 格式为内部格式" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="530" y="370" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-11" value="转换失败, 不进行处理" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="735" y="370" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-12" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-11" parent="1" target="l86Yfs9dcGPEZyCX4KLZ-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="795" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-15" target="l86Yfs9dcGPEZyCX4KLZ-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-15" value="解析 transaction meta 里面的 log_message" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="530" y="470" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-16" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-15" parent="1" target="l86Yfs9dcGPEZyCX4KLZ-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-20" value="TradeEvent" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="675" y="580" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-21" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-20" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-22" value="CreateEvent" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="580" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-23" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-22" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-25" value="提取创建新币的必要信息, 通过 mint 作为 key 存储到 token_map" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="360" y="680" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-25" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;curved=1;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-27" target="l86Yfs9dcGPEZyCX4KLZ-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;curved=1;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-27" target="l86Yfs9dcGPEZyCX4KLZ-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-27" value="根据买入卖出更新 token_map 里面的数据" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="670" y="680" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-28" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="l86Yfs9dcGPEZyCX4KLZ-27" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="l86Yfs9dcGPEZyCX4KLZ-33" target="l86Yfs9dcGPEZyCX4KLZ-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-33" value="钱包地址是 dev, 则更新 token_map 里 dev 的持仓情况" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="975" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-35" value="钱包地址不是 dev, 直接将交易数据插入 token_trades 表" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="975" y="740" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-39" value="当 dev 清仓后, 计算 dev 的盈亏情况, 将数据插入到 token_states 表" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="615" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-42" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="420" y="810" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l86Yfs9dcGPEZyCX4KLZ-43" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="720" y="810" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rs-Rj7AtTw8I45iOaWZi" name="pump打新">
+    <mxGraphModel dx="2253" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-1" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="260" y="130" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-3" value="订阅 jito shredstream" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-3" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-5" value="将 entries 里面的所有 transaction 都取出来" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-6" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-7" value="将 transaction 进行分片, 每 800 个 transaction 用一个线程处理" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="202.5" y="420" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-8" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-9" value="解析 pump 交易指令并构建内部数据结构" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-10" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-9" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-11" value="黑名单过滤" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-12" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-11" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-13" value="白名单过滤" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="720" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-14" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-13" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-15" target="waCVOQTF6RfbhqlAMwGc-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-15" value="校验 dev 的买入 sol 是否在规定范围内" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="820" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-16" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-15" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-17" value="发起买入" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="920" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-18" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-17" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-19" target="waCVOQTF6RfbhqlAMwGc-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-19" value="等待 1.5 秒, 查询 token 账户是否买入成功" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="213" y="1020" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-20" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-19" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-21" value="买入成功后插入 token_state 到 TOKEN_TABLE 里面" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="213" y="1120" width="125" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-22" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-21" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="1220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-23" value="开启新线程启动 3.5 秒止损" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-24" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-23" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-25" target="waCVOQTF6RfbhqlAMwGc-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-120" y="1040" />
+              <mxPoint x="-120" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-25" value="token 账户余额 &amp;lt;= 0, 继续处理下一个 tx" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="15" y="1020" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-28" target="waCVOQTF6RfbhqlAMwGc-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-28" value="3.5 秒后涨幅小于 0.2, 直接卖出" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-29" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="waCVOQTF6RfbhqlAMwGc-28" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-30" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="260" y="1420" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-31" target="waCVOQTF6RfbhqlAMwGc-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-31" value="3.5 秒后涨幅大于 0.2, 不卖, 等待 grpc 监听任务处理" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="15" y="1320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-33" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="1325" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="waCVOQTF6RfbhqlAMwGc-35" target="waCVOQTF6RfbhqlAMwGc-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="75" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="waCVOQTF6RfbhqlAMwGc-35" value="否, 继续处理下一个 tx" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="15" y="820" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-1" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="710" y="130" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-3" value="通过 grpc 监听 transaction" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="665" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-5" value="处理收到的每个 transaction" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="665" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-6" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endSize=8;dashed=1;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-9" target="hRI3woLZ8VqxKS-DqHl5-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-9" target="hRI3woLZ8VqxKS-DqHl5-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-9" value="转换收到的 grpc transaction 格式为内部格式" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="665" y="420" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-10" value="转换失败, 不进行处理" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="870" y="420" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-11" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=middle;endArrow=classic;endSize=8;strokeColor=default;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-10" target="hRI3woLZ8VqxKS-DqHl5-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="930" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-13" target="hRI3woLZ8VqxKS-DqHl5-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-13" value="提取本次交易的账户地址" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="665" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endSize=8;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-17" target="hRI3woLZ8VqxKS-DqHl5-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BoweecPnbR1rFbfkCR7B-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-17" target="BoweecPnbR1rFbfkCR7B-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-17" value="找到 TOKEN_TABLE 里面匹配的 bonding_curve 地址" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="658" y="635" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endSize=8;" edge="1" parent="1" source="hRI3woLZ8VqxKS-DqHl5-19" target="hRI3woLZ8VqxKS-DqHl5-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="525" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRI3woLZ8VqxKS-DqHl5-19" value="没有找到, 继续处理下一个 tx" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="465" y="640" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BoweecPnbR1rFbfkCR7B-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="BoweecPnbR1rFbfkCR7B-1" target="BoweecPnbR1rFbfkCR7B-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BoweecPnbR1rFbfkCR7B-1" value="解析 transaction meta 里面的 log_message" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="658" y="765" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="BoweecPnbR1rFbfkCR7B-3" target="y82LG_Srtw2gCUIdmiLX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BoweecPnbR1rFbfkCR7B-3" value="解析 TradeEvent" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="658" y="895" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-1" target="y82LG_Srtw2gCUIdmiLX-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-1" value="根据最新的 transaction 计算 mint 当前的价格" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="658" y="1025" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-3" target="y82LG_Srtw2gCUIdmiLX-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-3" target="y82LG_Srtw2gCUIdmiLX-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-3" value="更新价格, 触发止盈止损" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="658" y="1155" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-5" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="710.5" y="1270" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-7" value="&lt;b&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;shredstream 监听新币创建买入流程&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-8" value="&lt;b&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;grpc 监听新币价格卖出流程&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="595" y="70" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-9" target="y82LG_Srtw2gCUIdmiLX-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-9" value="更新 TOKEN_TABLE 里 token_state 的当前价格和最高价格" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1223" y="1155" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-11" target="y82LG_Srtw2gCUIdmiLX-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-11" value="计算价格变化比例&lt;div&gt;change = (new_price - first_buy_price) / first_buy_price&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1191.5" y="1280" width="197.5" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-13" target="y82LG_Srtw2gCUIdmiLX-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-13" target="y82LG_Srtw2gCUIdmiLX-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-13" target="y82LG_Srtw2gCUIdmiLX-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-13" value="根据当前的 sell_stage 决定是否卖出" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1194.5" y="1415" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-15" target="y82LG_Srtw2gCUIdmiLX-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-15" value="sell_stage == 0, 如果持仓时间大于 2 秒并且 change 小于 0.2" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1535" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-17" value="快速止盈, 全部卖出, 删除 token_state" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-19" target="y82LG_Srtw2gCUIdmiLX-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-19" value="sell_stage &amp;gt;= 1, 如果最新价格小于等于最高价的 95%" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1194.5" y="1535" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-21" value="止盈转止损, 剩余全部卖出, 删除 token_state" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1194.75" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-25" target="y82LG_Srtw2gCUIdmiLX-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-25" target="y82LG_Srtw2gCUIdmiLX-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-25" target="y82LG_Srtw2gCUIdmiLX-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-25" target="y82LG_Srtw2gCUIdmiLX-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-25" value="其他" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="1535" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-27" target="y82LG_Srtw2gCUIdmiLX-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-27" value="sell_stage == 0 &amp;amp;&amp;amp; change &amp;gt;= 0.2" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-29" value="更新 sell_stage = 1, 卖出 50%" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="1795" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-32" target="y82LG_Srtw2gCUIdmiLX-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-32" value="sell_stage == 1 &amp;amp;&amp;amp; change &amp;gt;= 0.4" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-33" value="更新 sell_stage = 2, 卖出剩余 4&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;0%&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="1795" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-36" target="y82LG_Srtw2gCUIdmiLX-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-36" value="sell_stage == 2 &amp;amp;&amp;amp; change &amp;gt;= 0.6" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="2050" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-37" value="剩余全部卖出, 删除 token_state" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="2050" y="1795" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ff0000;align=center;verticalAlign=bottom;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endSize=8;" edge="1" parent="1" source="y82LG_Srtw2gCUIdmiLX-40" target="y82LG_Srtw2gCUIdmiLX-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-40" value="sell_stage &amp;lt; 3 &amp;amp;&amp;amp; change &amp;lt;= -0.05" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="1665" width="191.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y82LG_Srtw2gCUIdmiLX-41" value="止损全部卖出" style="rounded=0;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="1795" width="191.5" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,6 @@
+[submodule "shred-sniper-server"]
+	path = shred-sniper-server
+	url = git@github.com:tuyu79/shred-sniper-server.git
+[submodule "shred-sniper-ui"]
+	path = shred-sniper-ui
+	url = git@github.com:tuyu79/shred-sniper-ui.git
